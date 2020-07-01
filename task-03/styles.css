@@ -1,0 +1,15 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#gallery > li {
+  margin: 30px;
+  width: 500px;
+}
