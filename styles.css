@@ -1,0 +1,33 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#gallery > li {
+  margin: 30px;
+  width: 500px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+.task {
+  margin: 100px;
+  border: #4caf50 2px solid;
+  min-height: 100%;
+}

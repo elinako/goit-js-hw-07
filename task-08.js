@@ -1,8 +1,7 @@
-const inputField = document.querySelector("input");
+const inputField = document.getElementById("input-task8");
 const btnRender = document.querySelector('[data-action="render"]');
 const btnDestroy = document.querySelector('[data-action="destroy"]');
 const boxFolder = document.getElementById("boxes");
-boxFolder.style.display = "flex";
 
 btnRender.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
@@ -10,7 +9,7 @@ btnDestroy.addEventListener("click", destroyBoxes);
 function createBoxes(amount) {
   amount = inputField.value;
   let size = 30;
-  for (i = 0; i < amount; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
     box.classList.add("box");
     box.style.display = "block";
