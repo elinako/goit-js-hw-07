@@ -19,12 +19,14 @@ const ul = document.querySelector("ul#ingredients");
 //   return ul;
 // };
 
-function crt(element) {
-  const li = document.createElement("li");
-  li.textContent = `${element}`;
-  return li;
-}
+// function crt(element) {
+//   const li = document.createElement("li");
+//   li.textContent = `${element}`;
+//   return li;
+// }
 
-const list = ingredients.forEach((item) => crt(item));
+const list = ingredients.reduce((acc, item) => acc + `<li>${item}</li>`, "");
 
-ul.append(list);
+console.log(list);
+
+ul.insertAdjacentHTML("afterbegin", list);

@@ -1,13 +1,18 @@
-const inputField = document.getElementById("input-task8");
 const btnRender = document.querySelector('[data-action="render"]');
 const btnDestroy = document.querySelector('[data-action="destroy"]');
 const boxFolder = document.getElementById("boxes");
 
-btnRender.addEventListener("click", createBoxes);
+btnRender.addEventListener("click", boxCreation);
 btnDestroy.addEventListener("click", destroyBoxes);
 
+function boxCreation() {
+  const inputField = document.getElementById("input-task8");
+  let value = inputField.value;
+  console.log(value);
+  createBoxes(value);
+}
+
 function createBoxes(amount) {
-  amount = inputField.value;
   let size = 30;
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
@@ -32,7 +37,7 @@ function randomColor(from, to) {
   return Math.random() * (to - from) + from;
 }
 
-function destroyBoxes(amount) {
+function destroyBoxes() {
   const element = document.getElementById("boxes");
   while (element.firstChild) {
     element.removeChild(element.firstChild);

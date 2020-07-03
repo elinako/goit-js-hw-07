@@ -7,13 +7,13 @@ const incrementation = document.querySelector(
 
 let counterValue = 0;
 
-function decrement(e) {
+function decrement() {
   const element = document.getElementById("value");
   counterValue -= 1;
   element.textContent = counterValue;
 }
 
-function increment(e) {
+function increment() {
   const element = document.getElementById("value");
   counterValue += 1;
   element.textContent = counterValue;
